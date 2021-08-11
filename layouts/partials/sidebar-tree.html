@@ -51,7 +51,7 @@
           {{ $isRedirected :=  findRE "^/docs/(languages|platforms)/.+?/(api|daily-builds)(/.*)?$" .RelPermalink -}}
           {{ $isExternal := or (hasPrefix .RelPermalink "http") $isRedirected -}}
           <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $shouldDelayActive) $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}" {{- if $isExternal }} target="_blank" rel="noopener"{{ end -}}>
-            {{- .LinkTitle }}
+            {{- .LinkTitle -}}
             {{ if $isExternal }}<i class="fas fa-external-link-alt"></i>{{ end -}}
           </a>
         {{ else }}
