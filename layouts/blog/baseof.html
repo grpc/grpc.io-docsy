@@ -6,6 +6,9 @@
   <body class="td-{{ .Kind }} td-blog {{- with .Page.Params.body_class }} {{ . }}{{ end }}">
     <header>
       {{ partial "navbar.html" . }}
+      <div  class="banner-container">
+        {{ partial "banner.html" . }}
+      </div>
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main">
@@ -31,7 +34,5 @@
       {{ partial "footer.html" . }}
     </div>
     {{ partial "scripts.html" . }}
-    <script src='{{ "/js/adjustPadding.js" | relURL }}'></script>
-    <script src='{{ "/js/adjustRssButton.js" | relURL }}'></script>
   </body>
 </html>
