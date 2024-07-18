@@ -6,9 +6,7 @@
   <body class="td-{{ .Kind }} td-blog {{- with .Page.Params.body_class }} {{ . }}{{ end }}">
     <header>
       {{ partial "navbar.html" . }}
-      <div  class="banner-container">
-        {{ partial "banner.html" . }}
-      </div>
+      {{ partial "banner.html" . }}
     </header>
     <div class="container-fluid td-outer">
       <div class="td-main">
